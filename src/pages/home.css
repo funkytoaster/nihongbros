@@ -1,0 +1,21 @@
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.CTAS {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+}
+
+.CTAS > button + button {
+    margin-top: 8px;
+}
+
+.kanasPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
