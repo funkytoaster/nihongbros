@@ -3,7 +3,6 @@ import React, { useEffect, useState, useMemo } from "react";
 import OutlinedInput from "@mui/material/OutlinedInput";
 
 import Kana from "../components/kana.tsx";
-import kanalist from "../assets/kanalist";
 import Stats from "../components/stats.tsx";
 import Button from "@mui/material/Button";
 
@@ -27,7 +26,7 @@ function shuffle(array) {
   return array;
 }
 
-const KanasPage = () => {
+const KanasPage = ({ kanalist }) => {
   const [index, setIndex] = useState(0);
 
   const [right, setRight] = useState(0);
@@ -82,6 +81,7 @@ const KanasPage = () => {
         cheats={cheats}
         challengeMode={challengeMode}
         setChallengeMode={setChallengeMode}
+        kanalist={kanalist}
       />
       {!challengeMode && (
         <div className="CTAS">

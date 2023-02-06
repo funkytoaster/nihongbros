@@ -1,10 +1,16 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import Button from "@mui/material/Button";
 import React, { useCallback, useEffect, useState } from "react";
-import kanalist from "../assets/kanalist";
 
 let ref;
-const Stats = ({ right, wrong, cheats, challengeMode, setChallengeMode }) => {
+const Stats = ({
+  right,
+  wrong,
+  cheats,
+  challengeMode,
+  setChallengeMode,
+  kanalist,
+}) => {
   const [timer, setTimer] = useState({ min: 0, sec: 0 });
   const [endChallenge, setEndChallenge] = useState(false);
 
@@ -31,8 +37,8 @@ const Stats = ({ right, wrong, cheats, challengeMode, setChallengeMode }) => {
     setEndChallenge(() => {
       setChallengeMode(false);
       setTimer({ min: 0, sec: 0 });
-      
-      return false
+
+      return false;
     });
   };
 
